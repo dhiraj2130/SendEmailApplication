@@ -9,23 +9,14 @@ var mailgunmodel = function(options){
 
     this.username = 'api';
     this.apiKey = options.apiKey;
-    //this.domain = options.domain;
     this.auth = [this.username, options.apikey].join(':');
-    //this.mute = options.mute || false;
-   // this.timeout = options.timeout;
+
 
     this.host = options.host || 'api.mailgun.net';
-    //this.endpoint = options.endpoint || '/v3/sandboxa74099bcdea14342a6b436007711c25a.mailgun.org';
-    this.endpoint =    '/v3/sandboxa74099bcdea14342a6b436007711c25a.mailgun.org' ;//options.endpoint || '/v3/sandboxa74099bcdea14342a6b436007711c25a.mailgun.org';
+    this.endpoint =   options.endpoint || '/v3/sandboxa74099bcdea14342a6b436007711c25a.mailgun.org';
 
-
- this.protocol = options.protocol || 'https:';
+    this.protocol = options.protocol || 'https:';
     this.port = options.port || 443;
-    this.retry = options.retry || 1;
-
-    // if (options.proxy) {
-    //     this.proxy = options.proxy;
-    // }
 
     this.options = {
         host: this.host,
@@ -33,9 +24,6 @@ var mailgunmodel = function(options){
         protocol: this.protocol,
         port: this.port,
         auth: this.auth,
-      //  proxy: this.proxy,
-      //  timeout: this.timeout,
-       // retry: this.retry
     };
     
 }

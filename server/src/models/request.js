@@ -24,7 +24,6 @@ Request.prototype.request = function (method, resource, data, fn) {
     this.headers = {};
     if(method === 'POST'){
         this.payload = qs.stringify(data);
-       // console.log(" this .payload = "+this.payload);
         if (this.payload) path = path.concat('?', this.payload);
         var length = this.payload ? Buffer.byteLength(this.payload) : 0;
         this.headers['Content-Length'] = length;
@@ -71,9 +70,7 @@ Request.prototype.handleResponse = function (res) {
 
     res.on('end', function () {
         var body;
-        console.log('response status code: %s content type: %s error: %s', res.statusCode, res.headers['content-type'], error);
-   
-     if (!error && res.statusCode !== 200) {
+        if (!error && res.statusCode !== 200) {
             var msg = body ? body.message || body.response : body || chunks || res.statusMessage;
             error = new Error(msg);
             error.statusCode = res.statusCode;
@@ -90,31 +87,24 @@ Request.prototype.performRequest = function (options) {
         var req;
 
         if (options.protocol === 'http:') {
-            console.log(JSON.stringify(options));
             req = http.request(options, function (res) {
                 return self.handleResponse(res);
             });
         }
         else {
-            console.log(" options =  "+JSON.stringify(options));
             req = https.request(options, function (res) {
                 return self.handleResponse(res);
             });
         }
 
-
-
         req.on('error', function (e) {
-            //console.log(` error occured in sending mail ${JSON.stringify(e)}`);
             return self.callback(e);
         });
 
         if (this.payload && (method === 'POST')) {
             req.write(this.payload);
         }
-
         req.end();
-
 };
 
 module.exports = Request;

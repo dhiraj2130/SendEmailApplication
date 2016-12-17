@@ -4,7 +4,7 @@
 
 const expect = require('chai').expect;
 const mailgunmodel = require('../../src/models/mailgunmodel');
-
+const apikey = require('../../config/mailConfig')
 describe(' mailgunmodel   ', () =>{
 
     var api_key = "fdjlkajfoeajflcajfa";

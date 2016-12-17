@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha --reporter 'spec' --recursive test",
     "start": "node --use_strict index.js"
   },
   "author": "dhiraj kumar",
@@ -12,7 +12,9 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
-    "jsonschema": "^1.1.1"
+    "jsonschema": "^1.1.1",
+    "q": "^1.4.1",
+    "qs": "^6.3.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",

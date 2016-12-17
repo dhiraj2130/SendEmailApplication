@@ -7,18 +7,36 @@ const router = express.Router();
 const mailgunmodel = require('../models/mailgunmodel');
 const mailConfig = require('../../config/mailConfig');
 const mailGunKey = require('../../config/mailgunkey').api_key;
-const sendGridKey = require('../../config/mailgunkey').api_key;
+const sendGridKey_ = require('../../config/mailgunkey').api_key;
+const sendGridModel = require('../models/sendGridModel');
 
 router.post('/',(req,res) => {
 
 
-    //var api_key = mailGunKey;//'key-8d6d84a2b9890fb3a091217c4b368758';
+    var api_key = 'key-8d6d84a2b9890fb3a091217c4b368758';
 
-    var mailgun = mailgunmodel({apikey: mailGunKey});
+    var mailgun = mailgunmodel({apikey: api_key});
 
     var data = mailConfig;
 
     mailgun.post(data, function (error, body) {
+        if(error){
+            res.status(error.statusCode).send(error.status);
+        }
+        res.status(200).send(body);
+    });
+});
+
+router.post('/sendGrid',(req,res) => {
+
+
+    //var api_key = mailGunKey;//'key-8d6d84a2b9890fb3a091217c4b368758';
+
+    var sendGrid = sendGridModel({sendGridKey: "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"});
+
+    var data = mailConfig;
+
+    sendGrid.post(data, function (error, body) {
         if(error){
             res.status(error.statusCode).send(error.status);
         }

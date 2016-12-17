@@ -5,7 +5,7 @@ const express = require('express');
 
 const router = express.Router();
 const mailgunmodel = require('../models/mailgunmodel');
-
+const mailConfig = require('../../config/mailConfig');
 
 router.post('/',(req,res) => {
 
@@ -14,15 +14,9 @@ router.post('/',(req,res) => {
    // var domain = 'www.mydomain.com';
     var mailgun = mailgunmodel({apikey: api_key});
 
-    var data = {
-        from: 'postmaster@sandboxa74099bcdea14342a6b436007711c25a.mailgun.org',
-        to: 'dhirajvit@gmail.com',
-        subject: 'Hello dhirajvit',
-        text: 'Congratulations dhirajvit'
-    };
+    var data = mailConfig;
 
     mailgun.post(data, function (error, body) {
-       // console.log("error" +error);
         if(error){
             res.status(error.statusCode).send(error.status);
         }

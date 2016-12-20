@@ -55,14 +55,6 @@ higher volume for less price, we should be in position to absorb that.
 what needs to be done :
 1. External load balancer, gateway needs to be configured which can increase the intial set up cost.
 
-ng new myproject --style=scss
-UI validation rules:
-all the fields are required
-subject minimum 3 characters : assumed. no requirments specified
-contents minimum 3 characters : assumed . no requirements specified
-the field is invalid and it’s dirty (the field is touched/edited), or
-the field is invalid and the form is submitted
 
-certify to be tested on ....
 
 

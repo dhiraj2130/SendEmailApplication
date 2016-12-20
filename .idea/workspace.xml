@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="203ca9b4-2aa9-4947-94d9-e3574be1a324" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EmailSendAppFrontend/src/app/app.component.html" afterPath="$PROJECT_DIR$/EmailSendAppFrontend/src/app/app.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EmailSendAppFrontend/src/app/app.component.spec.ts" afterPath="$PROJECT_DIR$/EmailSendAppFrontend/src/app/app.component.spec.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EmailSendAppFrontend" afterPath="$PROJECT_DIR$/EmailSendAppFrontend" />
     </list>
     <ignored path="SendEmailApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.component.spec.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.component.spec.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EmailSendAppFrontend/src/app/app.component.spec.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
@@ -43,6 +41,16 @@
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="angular-cli.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EmailSendAppFrontend/angular-cli.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,6 +128,7 @@
         <option value="$PROJECT_DIR$/EmailSendAppFrontend/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/EmailSendAppFrontend/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/EmailSendAppFrontend/src/app/app.component.spec.ts" />
+        <option value="$PROJECT_DIR$/EmailSendAppFrontend/angular-cli.json" />
       </list>
     </option>
   </component>
@@ -327,12 +336,12 @@
       <updated>1481867826007</updated>
       <workItem from="1481867827108" duration="27139000" />
       <workItem from="1482213131439" duration="218000" />
-      <workItem from="1482213448334" duration="3152000" />
+      <workItem from="1482213448334" duration="3330000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30509000" />
+    <option name="totallyTimeSpent" value="30687000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="337" y="23" width="1226" height="806" extended-state="0" />
@@ -380,14 +389,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/angular-cli.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/test.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -758,6 +759,14 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EmailSendAppFrontend/angular-cli.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+          <folding />
         </state>
       </provider>
     </entry>

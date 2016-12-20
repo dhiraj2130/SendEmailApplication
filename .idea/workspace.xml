@@ -2,27 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="203ca9b4-2aa9-4947-94d9-e3574be1a324" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/protractor.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/src/app/app.component.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/src/app/app.component.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/src/app/app.component.spec.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/src/app/app.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/src/app/app.module.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/src/app/index.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/src/assets/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/src/environments/environment.prod.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/src/environments/environment.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/src/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/src/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/src/main.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/src/polyfills.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/src/styles.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/src/test.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/src/tsconfig.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/src/typings.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EmailSendApplicationFrontEnd/tslint.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SendEmailApplication.iws" />
@@ -244,12 +223,12 @@
       <updated>1481867826007</updated>
       <workItem from="1481867827108" duration="27139000" />
       <workItem from="1482213131439" duration="218000" />
-      <workItem from="1482213448334" duration="2048000" />
+      <workItem from="1482213448334" duration="2497000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29405000" />
+    <option name="totallyTimeSpent" value="29854000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="337" y="23" width="1226" height="806" extended-state="0" />

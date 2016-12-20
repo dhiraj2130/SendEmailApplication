@@ -55,6 +55,7 @@ higher volume for less price, we should be in position to absorb that.
 what needs to be done :
 1. External load balancer, gateway needs to be configured which can increase the intial set up cost.
 
-
+frontend project
+https://github.com/dhiraj2130/EmailSendAppFrontend
 
 

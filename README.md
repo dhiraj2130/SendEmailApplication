@@ -31,7 +31,12 @@ and for sendgrid mail
 url : http://localhost:8000/sendGrid
 method : post
 
-Solution:
+Solution implemented for fail over and laod balancing:
+both the email servers are selected randomly. if one server fails the other works.
+As of now the sendGrid is failing because the api key is locked. It helps to test the load balancing and fail over.
+from the logs it can be seen that both the server are tried as first option and send as second option.
+
+Solution consideration:
 The problem of distributing the load of send mails across two providers require and solution.
 Solution 1: implemented in code which is toggles between the two providers. If one fails, the other is invoked.
 Considering a scenario of failure will lead to hit both the servers which will increase the turn around time. A quick solution

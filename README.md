@@ -1,6 +1,7 @@
 # SendEmailApplication
 
-to start the application : npm start
+to start the application :
+ change to root directory of server where package.json is and npm start
 to test the application : npm test
 
 The application is initialised with

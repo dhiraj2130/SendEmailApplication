@@ -10,6 +10,11 @@ const mailGunKey = require('../../config/mailgunkey').api_key;
 const sendGridKey_ = require('../../config/mailgunkey').api_key;
 const sendGridModel = require('../models/sendGridModel');
 
+router.post('/test',(req,res) => {
+    console.log(" req received ");
+    res.header('Access-Control-Allow-Origin', '*');
+    res.status(200).send({message:'our mail is accepted for processing'});
+})
 router.post('/',(req,res) => {
 
 

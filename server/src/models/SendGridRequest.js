@@ -20,12 +20,12 @@ sendGridRequest.prototype.request = function (method,  data, fn) {
 
     var self = this;
     var path = this.endpoint;
-    this.payload = `{"personalizations": 
+    this.payload = `{"personalizations":
         [
-    {"to": [{"email": "dhirajvit@yahoo.com"}]}],
-        "from": {"email": "dhirajvit@gmail.com"},
-    "subject": "Sending with SendGrid is Fun",
-        "content": [{"type": "text/plain", "value": "and easy to do anywhere, even with cURL"
+    {"to": [{"email": ${data.to}}]}],
+        "from": {"email": ${data.from},
+    "subject": ${data.subject},
+        "content": [{"type": "text/plain", "value": ${data.text}"
 
     }
     ]

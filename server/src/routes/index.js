@@ -2,29 +2,45 @@
  * Created by dhiraj.kumar on 16/12/2016.
  */
 const express = require('express');
-
+const { validate } = require('express-jsonschema');
 const router = express.Router();
 const mailgunmodel = require('../models/mailgunmodel');
 const mailConfig = require('../../config/mailConfig');
 const mailGunKey = require('../../config/mailgunkey').api_key;
-const sendGridKey_ = require('../../config/mailgunkey').api_key;
+const sendGridKey = require('../../config/sendGridKey').SENDGRID_API_KEY;
 const sendGridModel = require('../models/sendGridModel');
+const emailschema = require('../schema');
 
-router.post('/test',(req,res) => {
-    console.log(" req received ");
-    res.header('Access-Control-Allow-Origin', '*');
-    res.status(200).send({message:'our mail is accepted for processing'});
+
+const methodNotAllowed = (req, res) => {
+    res.status(405).end();
+};
+
+router.put('/', methodNotAllowed);
+router.get('/', methodNotAllowed);
+router.delete('/', methodNotAllowed);
+
+router.options('/mail',(req,res) => {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
+    res.header('Access-Control-Allow-Headers','Content-Type');
+    res.status(200).send('ok');
 })
 
+router.post('/mail',validate({body:emailschema}),(req,res) => {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
 
-router.post('/mail',(req,res) => {
+    var  randomNo = Math.floor(Math.random()*2)+1;
 
-   var  randomNo = Math.floor(Math.random()*2)+1;
+     var data  = {};
+        data.from = req.body.emailFrom;//'postmaster@sandboxa74099bcdea14342a6b436007711c25a.mailgun.org';
+         data.to = req.body.emailTo;
+         data.subject = req.body.emailSubject;
+         data.text = req.body.emailContent;
 
     if(randomNo == 1 ){
-        sendMailGunFunction((error,body)=>{
+        sendMailGunFunction(data,(error,body)=>{
             if(error){
-                sendSendGridFunction((error,body) =>{
+                sendSendGridFunction(data,(error,body) =>{
                     if(error){
                         res.status(error.statusCode).send(error.status);
                     }
@@ -35,10 +51,10 @@ router.post('/mail',(req,res) => {
             res.status(200).send(body);
         })
     }else{
-        sendSendGridFunction((error,body)=>{
+        sendSendGridFunction(data,(error,body)=>{
             if(error){
                 console.log(`sendGridFailed. trying out mailgun now.${JSON.stringify(error)}`)
-                sendMailGunFunction((error,body) =>{
+                sendMailGunFunction(data,(error,body) =>{
                     if(error){
                         res.status(error.statusCode).send(error.status);
                     }
@@ -51,21 +67,18 @@ router.post('/mail',(req,res) => {
     }
 });
 
-const sendMailGunFunction = function(cb){
+const sendMailGunFunction = function(data,cb){
 
-    var api_key = 'key-8d6d84a2b9890fb3a091217c4b368758';
-
-    var mailgun = mailgunmodel({apikey: api_key});
-
-    var data = mailConfig;
+    var mailgun = mailgunmodel({apikey: mailGunKey});
+   // var data = mailConfig;
      mailgun.post(data, cb);
 }
 
-const sendSendGridFunction = function(cb){
+const sendSendGridFunction = function(data,cb){
 
-    var sendGrid = sendGridModel({sendGridKey: "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"});
+    var sendGrid = sendGridModel({sendGridKey: sendGridKey});
    // the above key will not work as it is blocked.
-    var data = mailConfig;
+  //  var data = mailConfig;
     sendGrid.post(data, cb);
 }
 

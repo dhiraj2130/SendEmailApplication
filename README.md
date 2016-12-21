@@ -65,3 +65,11 @@ frontend project
 https://github.com/dhiraj2130/EmailSendAppFrontend
 
 
+CORS implemented allowing http://localhost:4200 as a consumer.
+Schema validation is implemented with schema:
+
+
+Limitation:
+sendGrid mail provider will not work as the api key is invalid
+Error handling can be improved
+

@@ -37,7 +37,7 @@ router.post('/mail',validate({body:emailschema}),(req,res) => {
          data.subject = req.body.emailSubject;
          data.text = req.body.emailContent;
 
-    if(randomNo == 1 ){
+    if(true){//randomNo == 1 ){
         sendMailGunFunction(data,(error,body)=>{
             if(error){
                 sendSendGridFunction(data,(error,body) =>{
@@ -48,7 +48,7 @@ router.post('/mail',validate({body:emailschema}),(req,res) => {
                 })
             }
             console.log(`send mail gun worked as first hit.`);
-            res.status(200).send(body);
+            res.status(200).json({result:"ok"});
         })
     }else{
         sendSendGridFunction(data,(error,body)=>{
@@ -56,10 +56,12 @@ router.post('/mail',validate({body:emailschema}),(req,res) => {
                 console.log(`sendGridFailed. trying out mailgun now.${JSON.stringify(error)}`)
                 sendMailGunFunction(data,(error,body) =>{
                     if(error){
+                        console.log(` Mail gun failed after sendGrid failed`);
                         res.status(error.statusCode).send(error.status);
+                    }else {
+                        console.log(` Mail gun worked after send grid failed`);
+                        res.status(200).send(body);
                     }
-                    console.log(` Mail gun worked after send grid failed`);
-                    res.status(200).send(body);
                 })
             }
             res.status(200).send(body);

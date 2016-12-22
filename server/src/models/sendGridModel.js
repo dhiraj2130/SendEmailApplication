@@ -8,18 +8,11 @@ var sendGridModel = function(options){
     if(!options.sendGridKey){
         throw new Error('sendGridKey value must be defined ');
     }
-    //
-    // this.username = 'api';
      this.sendGridKey = options.sendGridKey;
-     //this.authHeader = [this.username, options.apikey].join(':');
-    //
-    //
      this.host = options.host || 'api.sendgrid.com';
     this.endpoint =   options.endpoint || '/v3/mail/send';
-    //
      this.protocol = options.protocol || 'https:';
      this.port = options.port || 443;
-    //
     this.options = {
         host: this.host,
         endpoint: this.endpoint,

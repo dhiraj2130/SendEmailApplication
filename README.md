@@ -73,3 +73,6 @@ Limitation:
 sendGrid mail provider will not work as the api key is invalid
 Error handling can be improved
 
+email to : needs to be verified and configured
+email from : is postmaster@sandboxa74099bcdea14342a6b436007711c25a.mailgun.org , whatever we choose in ui.
+

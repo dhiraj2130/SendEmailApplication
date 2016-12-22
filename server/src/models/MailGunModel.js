@@ -9,6 +9,7 @@ var mailgunmodel = function(options){
 
     this.username = 'api';
     this.apiKey = options.apiKey;
+    //console.log(this.apiKey);
     this.auth = [this.username, options.apikey].join(':');
 
 

@@ -1,9 +1,10 @@
 var http = require('http');
 
-
+//req.params.excursionKey
+//req.header.hostname
 
 var opts = {
-    host: 'localhost',
+    host: req.header('hostname'),
     port: '8000',
     //protocol: 'http:',
     path: '/partyaddress/name',
